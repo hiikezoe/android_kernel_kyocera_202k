@@ -22,7 +22,7 @@
 #include <linux/debugfs.h>
 #include <linux/slab.h>
 #include <mach/msm_smsm.h>
-#include <pm8921-charger_oem.h>
+#include "pm8921-charger_oem.h"
 
 pm8921_oem_chg_param_charger oem_param_charger = {
 	0x1162,

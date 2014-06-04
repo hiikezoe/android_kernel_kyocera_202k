@@ -20,7 +20,7 @@
 #include <linux/err.h>
 #include <linux/module.h>
 #include <linux/mfd/pm8xxx/pm8xxx-adc.h>
-#include <../power/pm8921-charger_oem.h>
+#include "../power/pm8921-charger_oem.h"
 #define KELVINMIL_DEGMIL	273160
 
 /* Units for temperature below (on x axis) is in 0.1DegC as
