@@ -1,0 +1,107 @@
+# This software is contributed or developed by KYOCERA Corporation.
+# (C) 2012 KYOCERA Corporation
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
+
+config SECURITY_KCLSM
+	bool "KCLSM LSM Support"
+	depends on SECURITY
+	default n
+	help
+	  This is a KCLSM LSM module.
+
+	  If you are unsure how to answer this question, answer N.
+
+config SECURITY_KCLSM_PTRACE
+	bool "KCLSM LSM ptrace_access_check Support"
+	depends on SECURITY_KCLSM
+	default n
+	help
+	  This is a KCLSM LSM ptrace_access_check module Support.
+
+	  If you are unsure how to answer this question, answer N.
+
+config SECURITY_KCLSM_INSMOD
+	bool "KCLSM LSM kernel_setup_load_info Support"
+	depends on SECURITY_KCLSM
+	default n
+	help
+	  This is a KCLSM LSM kernel_setup_load_info module Support.
+
+	  If you are unsure how to answer this question, answer N.
+
+config SECURITY_KCLSM_MOUNT
+	bool "KCLSM LSM sb_mount device permission Support"
+	depends on SECURITY_KCLSM
+	default n
+	help
+	  This is a KCLSM LSM device permission with sb_mount module Support.
+
+	  If you are unsure how to answer this question, answer N.
+
+config SECURITY_KCLSM_UMOUNT
+	bool "KCLSM LSM sb_umount Support"
+	depends on SECURITY_KCLSM
+	default n
+	help
+	  This is a KCLSM LSM sb_umount module Support.
+
+	  If you are unsure how to answer this question, answer N.
+
+config SECURITY_KCLSM_PIVOTROOT
+	bool "KCLSM LSM sb_pivotroot Support"
+	depends on SECURITY_KCLSM
+	default n
+	help
+	  This is a KCLSM LSM sb_pivotroot module Support.
+
+	  If you are unsure how to answer this question, answer N.
+
+config SECURITY_KCLSM_CHROOT
+	bool "KCLSM LSM path_chroot Support"
+	depends on SECURITY_KCLSM && SECURITY_PATH
+	default n
+	help
+	  This is a KCLSM LSM path_chroot module Support.
+
+	  If you are unsure how to answer this question, answer N.
+
+config SECURITY_KCLSM_MKNOD
+	bool "KCLSM LSM path_mknod Support"
+	depends on SECURITY_KCLSM && SECURITY_PATH
+	default n
+	help
+	  This is a KCLSM LSM path_mknod module Support.
+
+	  If you are unsure how to answer this question, answer N.
+
+config SECURITY_KCLSM_OPEN
+	bool "KCLSM LSM dentry_open Support"
+	depends on SECURITY_KCLSM
+	default n
+	help
+	  This is a KCLSM LSM dentry_open module Support.
+
+	  If you are unsure how to answer this question, answer N.
+
+config SECURITY_KCLSM_KCJPROPD
+	bool "KCLSM kcjpropd process checking"
+	depends on SECURITY_KCLSM && SECURITY_KCLSM_OPEN
+	default n
+	help
+	  This is a KCLSM kcjpropd process checking Support.
+
+	  If you are unsure how to answer this question, answer N.
+
